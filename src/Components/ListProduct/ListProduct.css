@@ -28,6 +28,7 @@
 .listproduct-format{
     align-items: center;
     font-size: 500;
+    width: 100%;
 }
 
 .listproduct-product-icon{
@@ -39,6 +40,21 @@
     cursor: pointer;
     margin: auto;
 }
+
+@media(min-width: 1200px) {
+    .listproduct-format-main, .listproduct-format {
+        grid-template-columns: minmax(150px, 1fr) minmax(250px, 3fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(150px, 1fr) 60px;
+    }
+}
+
+/* For screens wider than 1600px */
+@media(min-width: 1600px) {
+    .listproduct-format-main, .listproduct-format {
+        grid-template-columns: minmax(200px, 1fr) minmax(300px, 3fr) minmax(120px, 1fr) minmax(120px, 1fr) minmax(200px, 1fr) 70px;
+        font-size: 16px; /* Adjust font size for better readability on larger screens */
+    }
+}
+
 
 @media(max-width: 800px){
     .list-product{
